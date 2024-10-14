@@ -1,0 +1,156 @@
+* {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+}
+
+body {
+               background-color: rgb(0, 3, 63);
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+               flex-flow: column;
+}
+
+
+
+div.container {
+               width: 300px;
+               height: 350px;
+
+               padding: 10px;
+               margin: 90px auto;
+               z-index: 50;
+               position: relative;
+}
+
+div.container h3 {
+               font-size: 25px;
+               font-family: sans-serif;
+               color: white;
+               text-align: center;
+               letter-spacing: 1px;
+               margin-bottom: 15px;
+               z-index: 51;
+}
+
+/* -------------------------------------------------------form----------------------------------------------------------- */
+form {
+
+               display: flex;
+               flex-direction: column;
+               justify-content: space-evenly;
+}
+
+div.container input[type=text],
+div.container input[type=password] {
+               border: white 1px solid;
+               background-color: transparent;
+               border-radius: 30px;
+               width: 100%;
+               height: 40px;
+               padding: 10px;
+               color: white;
+               font-size: 15px;
+               font-family: sans-serif;
+               margin-bottom: 15px;
+               z-index: 52;
+}
+
+div.container input[type=text]::placeholder,
+div.container input[type=password]::placeholder {
+               font-size: 15px;
+               font-family: sans-serif;
+               color: white;
+               z-index: 53;
+}
+
+div.container input[type=text]:focus,
+div.container input[type=password]:focus {
+               border: white 1px solid;
+               outline: none;
+               box-shadow: 0px 0px 4px white, 0px 0px 4px inset white;
+               z-index: 54;
+}
+
+div.container input[type=submit] {
+               width: 100%;
+               border-radius: 30px;
+               border: none;
+               height: 40px;
+               background-image: linear-gradient(to right, #f12711, #f5af19);
+               margin-bottom: 15px;
+               cursor: pointer;
+}
+
+div.container input[type=submit] {
+               font-size: 15px;
+               font-family: sans-serif;
+               color: white;
+}
+
+div.container div.links {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+}
+
+div.container a {
+               /* width: 50%; */
+               float: left;
+               font-size: 15px;
+               font-family: sans-serif;
+               text-decoration: none;
+               color: white;
+               padding: 0px 10px;
+               text-transform: capitalize;
+               display: block;
+}
+
+
+
+/* ---------------------------------------------------------------circle------------------------------------------------ */
+div.circle {
+               width: 400px;
+               height: 400px;
+               border-radius: 38% 62% 63% 37% / 41%;
+               position: absolute;
+               top: 40px;
+               /* left: px; */
+               z-index: -1;
+               left: calc(50% - 200px);
+
+
+}
+
+@keyframes circle-animate {
+
+               100% {
+                              transform: rotate(600turn);
+               }
+}
+
+div.yellow-circle {
+               border: yellow 3px solid;
+               box-shadow: 0px 0px 10px yellow, inset 0px 0px 10px yellow;
+               transform: rotate(120deg);
+               animation: circle-animate 3600s linear 0s infinite normal;
+               z-index: 1;
+}
+
+div.red-circle {
+               border: red 3px solid;
+               box-shadow: 0px 0px 10px red, inset 0px 0px 10px red;
+               transform: rotate(240deg);
+               animation: circle-animate 3600s linear 0s infinite normal;
+               z-index: 2;
+}
+
+div.green-circle {
+               border: rgb(0, 205, 0) 3px solid;
+               box-shadow: 0px 0px 10px rgb(0, 205, 0), inset 0px 0px 10px rgb(0, 205, 0);
+               transform: rotate(0deg);
+               animation: circle-animate 3600s linear 0s infinite normal;
+               z-index: 3;
+}
